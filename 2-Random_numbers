@@ -1,0 +1,23 @@
+#!/bin/bash
+#random numbers
+for i in `seq 1`;do
+        printf "The first random number generated is "
+        echo $RANDOM > n
+        var1=`cat n`
+        echo $var1
+        printf "The square root is "
+        square_root=`echo "scale=4; sqrt($var1)" | bc`
+        echo $square_root
+        printf "The second random number is "
+        echo $RANDOM > m
+        var2=`cat m`
+        echo $var2
+        printf "The square root is "
+        square_root_2=`echo "scale=4; sqrt($var2)" | bc`
+        echo $square_root_2
+        printf "The sum of their square roots is "
+        sum=`echo "$square_root + $square_root_2"|bc`
+        echo $sum
+done
+rm m
+rm n

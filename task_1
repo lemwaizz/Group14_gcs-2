@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+file="$(date | awk '{print $6 "-" $2 "-" $3 "-"}')file.txt"
+printf " one \n two \n three \n four \n five \n" | tee $file 
